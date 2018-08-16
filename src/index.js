@@ -7,21 +7,22 @@ import styled from 'styled-components';
 import Dropdown from './dropdown';
 
 const InputWrapper = styled.input`
-  &.input {
-    border: 1px solid #f1f1f1;
-    border-radius: 3px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    outline: 0;
-    width: 100%;
-    box-sizing: border-box;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 55px;
+    min-width: ${(props) => props.value !== '' || props.value.length > 0 ? '200px' : 'max-content'};
+    max-width: 200px;
+    margin-left: 7px;
+    height: 30px;
 
-    &--show-dropdown {
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+
+    &:focus{
+        outline: none !important;
+        outline-offset: none !important;
+        width: 200px;
     }
-  }
 `;
 
 export default class Search extends Component {
