@@ -203,10 +203,6 @@
             { className: 'search__input' },
             _react2.default.createElement(InputWrapper, {
               type: 'text',
-              className: (0, _classnames2.default)({
-                input: true,
-                'input--show-dropdown': this.state.showDropdown
-              }),
               placeholder: this.props.placeholder,
               onChange: this.handleChange.bind(this),
               value: this.state.value

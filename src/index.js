@@ -115,10 +115,6 @@ export default class Search extends Component {
         <div className="search__input">
           <InputWrapper
             type="text"
-            className={ classNames({
-              input: true,
-              'input--show-dropdown': this.state.showDropdown
-            }) }
             placeholder={ this.props.placeholder }
             onChange={ this.handleChange.bind(this) }
             value={ this.state.value }
